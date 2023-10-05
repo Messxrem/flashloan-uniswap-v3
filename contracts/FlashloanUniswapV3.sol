@@ -12,10 +12,7 @@ import {FlashLoanSimpleReceiverBase} from "@aave/core-v3/contracts/flashloan/bas
 import "@uniswap/v3-core/contracts/interfaces/IUniswapV3Pool.sol";
 import "@uniswap/v3-core/contracts/interfaces/callback/IUniswapV3SwapCallback.sol";
 
-contract FlashloanUniswapV3 is
-    FlashLoanSimpleReceiverBase,
-    IUniswapV3SwapCallback
-{
+contract FlashloanUniswapV3 is FlashLoanSimpleReceiverBase, IUniswapV3SwapCallback {
     address public constant WETH = 0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2;
 
     IERC20 public immutable token0;
